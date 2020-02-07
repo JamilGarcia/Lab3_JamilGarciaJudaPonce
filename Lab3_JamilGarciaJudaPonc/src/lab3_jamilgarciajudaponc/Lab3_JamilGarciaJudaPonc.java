@@ -7,6 +7,17 @@ public class Lab3_JamilGarciaJudaPonc {
 
     static Scanner leer = new Scanner(System.in);
     static ArrayList<Jugador> jugadores = new ArrayList();
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     public static void main(String[] args) {
 
@@ -111,6 +122,42 @@ public class Lab3_JamilGarciaJudaPonc {
                                     break;
 
                                 case 2:// crear medico
+                                     System.out.print(" Ingrese nombre del medico: ");
+                                    String nombree = leer.next();
+                                    System.out.print(" Ingrese apellido del medico: ");
+                                    String apellidoo = leer.next();
+                                    System.out.print(" Ingrese años: ");
+                                    int anioss = leer.nextInt();
+                                    System.out.print(" Ingrese salario: ");
+                                    double salarioo = leer.nextDouble();
+                                    System.out.println(" Seleccione que tipo de medico: ");
+                                    System.out.println(" 1. Medico general");
+                                    System.out.println(" 2. Medico Cirujano");
+                                    System.out.println(" 3. Medico teraputa");
+                                    int medicos=leer.nextInt();
+                                    switch (medicos) {
+                                        case 1:// medico general
+                                            System.out.print(" Ingrese colegio: ");
+                                            String colegio=leer.next();
+                                            System.out.println("");
+                                            
+                                            
+                                            break;
+                                            
+                                        case 2:
+                                            
+                                            
+                                            break;
+                                            
+                                            
+                                        case 3:
+                                            
+                                            
+                                            break;
+                                        default:
+                                            throw new AssertionError();
+                                    }
+                                    
 
                                     break;
 
@@ -156,7 +203,6 @@ public class Lab3_JamilGarciaJudaPonc {
                                     System.out.println(" 10. Bandeja");
                                     System.out.println(" 11. Pases");
                                     System.out.println(" 12. posteo");
-                                    System.out.println(" 13. Altura");
                                     int modifyy = leer.nextInt();
                                     String salidass = "";
                                     switch (modifyy) {
@@ -638,7 +684,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             }
                                             if (posteoo == false) {
                                                 System.out.print(" Ingrese posteo: ");
-                                                int newPosteo=leer.nextInt();
+                                                int newPosteo = leer.nextInt();
                                                 jugadores.get(numPosteo).setPosteo(newPosteo);
                                                 System.out.println(" Posteo del jugador modificado con exito");
                                                 System.out.println();
@@ -648,10 +694,6 @@ public class Lab3_JamilGarciaJudaPonc {
                                                 System.out.println();
 
                                             }
-
-                                            break;
-
-                                        case 13:// modificar altura
 
                                             break;
 
@@ -710,5 +752,14 @@ public class Lab3_JamilGarciaJudaPonc {
         }
 
     }
+    
+    
+    
+    
+    
+    
+    
+    
+   
 
 }
