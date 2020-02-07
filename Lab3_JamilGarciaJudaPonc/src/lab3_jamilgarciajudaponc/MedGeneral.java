@@ -18,6 +18,11 @@ public class MedGeneral extends Medico{
     public void setNEnfreme(int NEnfreme) {
         this.NEnfreme = NEnfreme;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "MedGeneral{" + "NEnfreme=" + NEnfreme + '}';
+    }
      
     
     

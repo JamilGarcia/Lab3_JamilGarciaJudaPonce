@@ -20,7 +20,7 @@ public class EntrenadorPrin extends Entrenador{
 
     @Override
     public String toString() {
-        return "EntrenadorPrin{" + "salario=" + salario + '}';
+        return super.toString() + "EntrenadorPrin{" + "salario=" + salario + '}';
     }
     
     

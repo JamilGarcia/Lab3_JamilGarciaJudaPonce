@@ -22,7 +22,7 @@ public class EntradorAsis extends Entrenador{
 
     @Override
     public String toString() {
-        return "EntradorAsis{" + "salario=" + salario + '}';
+        return super.toString()+ "EntradorAsis{" + "salario=" + salario + '}';
     }
     
     

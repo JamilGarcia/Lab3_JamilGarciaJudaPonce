@@ -22,7 +22,7 @@ public class EntrenadorPrep {
 
     @Override
     public String toString() {
-        return "EntrenadorPrep{" + "salario=" + salario + '}';
+        return super.toString()+ "EntrenadorPrep{" + "salario=" + salario + '}';
     }
     
     
