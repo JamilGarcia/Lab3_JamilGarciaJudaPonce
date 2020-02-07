@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Lab3_JamilGarciaJudaPonc {
 
     static Scanner leer = new Scanner(System.in);
-    static ArrayList<Jugador> jugadores = new ArrayList();
+    static ArrayList<Jugador> persona = new ArrayList();
 
     public static void main(String[] args) {
 
@@ -60,28 +60,30 @@ public class Lab3_JamilGarciaJudaPonc {
                             switch (posPlayer) {
                                 case 1://base
                                     altura = 1.93;
-                                    jugadores.add(new Base(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
+                                    persona.add(new Base(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Base) ha sido agregado con exito");
                                     System.out.println();
+                                    
+                                    break;
                                 case 2:// escolta
                                     altura = 2.00;
-                                    jugadores.add(new Escolta(altura,camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
+                                    persona.add(new Escolta(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Escolta) ha sido agregado con exito");
                                     System.out.println();
-                                    
+
                                     break;
 
                                 case 3:// alero
 
                                     altura = 2.05;
-                                    jugadores.add(new Alero(altura,camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
+                                    persona.add(new Alero(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Alero) ha sido agregado con exito");
                                     System.out.println();
                                     break;
 
                                 case 4:// alero-pivot
                                     altura = 2.10;
-                                    jugadores.add(new AleroPivot(altura,camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
+                                    persona.add(new AleroPivot(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Alero-Pivot) ha sido agregado con exito");
                                     System.out.println();
 
@@ -89,7 +91,7 @@ public class Lab3_JamilGarciaJudaPonc {
 
                                 case 5:// Centro
                                     altura = 2.13;
-                                    jugadores.add(new Centro(altura,camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
+                                    persona.add(new Centro(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Centro) ha sido agregado con exito");
                                     System.out.println();
 
@@ -99,11 +101,146 @@ public class Lab3_JamilGarciaJudaPonc {
                                     System.out.println();
                             }
 
-                          
-
                             break;
 
-                        case 2:// Modificar atributos del jugador
+                        case 2:// Modificar atributos de persona
+                            if (persona.isEmpty()) {
+                                System.out.println(" No hay persona Registradas hasta el momento");
+                                System.out.println();
+                                break;
+
+                            }
+                            System.out.println(" Seleccione que desea modificar: ");
+                            System.out.println(" 1. Atributos del Jugador ");
+                            System.out.println(" 2. Atributps del Medico");
+                            System.out.println(" 3. Atributos de dueño del equipo");
+                            System.out.println(" 4. Atributos del Entrenador");
+                            int hijas = leer.nextInt();
+                            switch (hijas) {
+                                case 1://Modificar atributos de jugador
+                                    System.out.println(" Seleccione que desea modificar del jugador");
+                                    System.out.println(" 1. Nombre");
+                                    System.out.println(" 2. Apellido");
+                                    System.out.println(" 3. Años");
+                                    System.out.println(" 4. Salario");
+                                    System.out.println(" 5. Numero de camisa");
+                                    System.out.println(" 6. Tiros de 3");
+                                    System.out.println(" 7. Defensa ");
+                                    System.out.println(" 8. Tiro de media");
+                                    System.out.println(" 9. Rebote");
+                                    System.out.println(" 10. Bandeja");
+                                    System.out.println(" 11. Pases");
+                                    System.out.println(" 12. posteo");
+                                    System.out.println(" 13. Altura");
+                                    int modifyy = leer.nextInt();
+                                    switch (modifyy) {
+                                        case 1:// modificar Nombre
+                                            String salidass = "";
+                                            for (Object o : persona) {
+                                                if (o instanceof Jugador) {
+                                                    salidass += " [" + persona.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            System.out.print(" Ingrese posicion para modificar el nombre: ");
+                                            int posNombre = leer.nextInt();
+                                            boolean name = false;
+                                            for (int i = 0; i < persona.size(); i++) {
+                                                if (posNombre == i) {
+                                                    name = false;
+                                                } else {
+                                                    name = true;
+                                                }
+
+                                            }
+                                            if (name == false) {
+                                                System.out.print(" Ingrese un nuevo nombre: ");
+                                                String newNombre = leer.next();
+                                                persona.get(posNombre).setNombre(newNombre);
+                                                System.out.println(" Nombre del jugador modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+
+                                            break;
+
+                                        case 2:// modificar Apellido
+
+                                            break;
+
+                                        case 3:// modificar Años
+
+                                            break;
+
+                                        case 4:// modificar salario
+
+                                            break;
+
+                                        case 5:// modificar numero de camisa
+
+                                            break;
+
+                                        case 6:// modificar tiro de 3
+
+                                            break;
+
+                                        case 7:// modificar Defensa
+
+                                            break;
+
+                                        case 8:// modificar Tiro de media
+
+                                            break;
+
+                                        case 9:// modificar rebote
+
+                                            break;
+
+                                        case 10:// modificar bandeja
+
+                                            break;
+
+                                        case 11:// modificar pases
+
+                                            break;
+
+                                        case 12:// modificar posteo
+
+                                            break;
+
+                                        case 13:// modificar altura
+
+                                            break;
+
+                                        default:
+
+                                            System.out.println(" Opcion Incorrecta");
+                                            System.out.println();
+                                    }
+
+                                    break;
+
+                                case 2://Modificar atributos de medicos
+
+                                    break;
+
+                                case 3://Modificar atributos del dueño de equipo
+
+                                    break;
+
+                                case 4://Modificar atributos del entrenador
+
+                                    break;
+                                default:
+                                    System.out.println(" opcion incorrecta");
+                                    System.out.println();
+                            }
 
                             break;
 
