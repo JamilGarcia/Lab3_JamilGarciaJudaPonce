@@ -1,19 +1,15 @@
 package lab3_jamilgarciajudaponc;
 
-public class Base extends Jugador {
+public class Alero extends Jugador {
 
     private double altura;
 
-    public Base() {
-
+    public Alero() {
+        super();
     }
 
-    public Base(double altura, int camisaNum, int tirosDe3, int defensa, int tiroMedia, int rebote, int bandeja, int pases, int posteo, String nombre, String apellido, int anios, double salario) {
+    public Alero(double altura, int camisaNum, int tirosDe3, int defensa, int tiroMedia, int rebote, int bandeja, int pases, int posteo, String nombre, String apellido, int anios, double salario) {
         super(camisaNum, tirosDe3, defensa, tiroMedia, rebote, bandeja, pases, posteo, nombre, apellido, anios, salario);
-        this.altura = altura;
-    }
-
-    public Base(double altura) {
         this.altura = altura;
     }
 
@@ -27,7 +23,7 @@ public class Base extends Jugador {
 
     @Override
     public String toString() {
-        return super.toString() + " Posicion-> " + "Base " + " altura= " + altura;
+        return super.toString() + " Posicion-> " + "Alero " + " altura= " + altura;
     }
 
 }

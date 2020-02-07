@@ -10,13 +10,13 @@ public class Jugador extends Persona {
     private int bandeja;
     private int pases;
     private int posteo;
-    private int Altura;
+;
 
     public Jugador() {
         super();
     }
 
-    public Jugador(int camisaNum, int tirosDe3, int defensa, int tiroMedia, int rebote, int bandeja, int pases, int posteo, int Altura, String nombre, String apellido, int anios, double salario) {
+    public Jugador(int camisaNum, int tirosDe3, int defensa, int tiroMedia, int rebote, int bandeja, int pases, int posteo, String nombre, String apellido, int anios, double salario) {
         super(nombre, apellido, anios, salario);
         this.camisaNum = camisaNum;
         this.tirosDe3 = tirosDe3;
@@ -26,7 +26,7 @@ public class Jugador extends Persona {
         this.bandeja = bandeja;
         this.pases = pases;
         this.posteo = posteo;
-        this.Altura = Altura;
+
     }
 
     public int getCamisaNum() {
@@ -61,9 +61,7 @@ public class Jugador extends Persona {
         return posteo;
     }
 
-    public int getAltura() {
-        return Altura;
-    }
+   
 
     public void setCamisaNum(int camisaNum) {
         this.camisaNum = camisaNum;
@@ -97,13 +95,11 @@ public class Jugador extends Persona {
         this.posteo = posteo;
     }
 
-    public void setAltura(int Altura) {
-        this.Altura = Altura;
-    }
+  
 
     @Override
     public String toString() {
-        return "Jugador{" + "camisaNum=" + camisaNum + ", tirosDe3=" + tirosDe3 + ", defensa=" + defensa + ", tiroMedia=" + tiroMedia + ", rebote=" + rebote + ", bandeja=" + bandeja + ", pases=" + pases + ", posteo=" + posteo + ", Altura=" + Altura + '}';
+        return  super.toString() + "Jugador " + "camisaNum=" + camisaNum + ", tirosDe3=" + tirosDe3 + ", defensa=" + defensa + ", tiroMedia=" + tiroMedia + ", rebote=" + rebote + ", bandeja=" + bandeja + ", pases=" + pases + ", posteo=" + posteo;
     }
 
 }
