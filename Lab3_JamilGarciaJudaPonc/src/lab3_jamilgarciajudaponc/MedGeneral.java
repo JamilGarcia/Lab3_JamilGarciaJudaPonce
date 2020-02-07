@@ -2,7 +2,7 @@ package lab3_jamilgarciajudaponc;
 
 public class MedGeneral extends Medico{
     
-    private int NEnfreme;
+    private int NEnfreme = 0;
 
     public MedGeneral() {
     }

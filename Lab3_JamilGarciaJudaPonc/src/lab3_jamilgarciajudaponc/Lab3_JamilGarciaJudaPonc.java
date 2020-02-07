@@ -6,7 +6,10 @@ import java.util.Scanner;
 public class Lab3_JamilGarciaJudaPonc {
 
     static Scanner leer = new Scanner(System.in);
-    static ArrayList<Jugador> persona = new ArrayList();
+    static ArrayList<Jugador> jugadores = new ArrayList();
+    static ArrayList<Medico> medicos = new ArrayList();
+    static ArrayList<Entrenador> entrenadores = new ArrayList();
+    static ArrayList<DuenioDeEquipo> duenio = new ArrayList();
 
     public static void main(String[] args) {
 
@@ -63,7 +66,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                     persona.add(new Base(altura, camisa, tiros3, defensa, media, rebotes, bandeja, pases, posteo, nombre, apellido, anios, salario));
                                     System.out.println(" Jugador (Base) ha sido agregado con exito");
                                     System.out.println();
-                                    
+
                                     break;
                                 case 2:// escolta
                                     altura = 2.00;
@@ -255,6 +258,635 @@ public class Lab3_JamilGarciaJudaPonc {
                     break;
 
                 case 2:// Equipo
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    System.out.println();
+                    System.out.println("Creacion Del Equipo: ");
+                    System.out.println();
+                    System.out.println("Ingrese el nombre del equipo: ");
+                    String nomEquip = leer.nextLine();
+                    nomEquip = leer.nextLine();
+                    System.out.println("Ingrese el año de fundacion: ");
+                    int anioFun = leer.nextInt();
+                    System.out.println("Ingrese el numero de campeonatos ganados: ");
+                    int ncamp = leer.nextInt();
+
+                    System.out.println("Ingrese el personal que desea agregar: ");
+                    System.out.println(" 1. Jugador"
+                            + " 2. Medico"
+                            + " 3. Dueño del equipo"
+                            + " 4. Entrenador");
+                    int opcEquip = leer.nextInt();
+                    switch (opcEquip) {
+
+                        case 1://Jugador
+                            String salida = "";
+                            for (Object o : jugadores) {
+                                if (o instanceof Jugador) {
+                                    salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                }
+                            }
+                            System.out.println(salida);
+
+                            boolean jugador = false;
+
+                            System.out.println();
+                            System.out.print(" Ingrese posicion para fichar jugador: ");
+                            int jugadorAg = leer.nextInt();
+
+                            for (int i = 0; i < jugadores.size(); i++) {
+                                if (jugadorAg == i) {
+                                    jugador = false;
+                                } else {
+                                    jugador = true;
+                                }
+
+                            }
+                            
+                            if (jugador == false) {
+                                System.out.println("Seleccione posicion de jugador a fichar: ");
+                                System.out.println(" 1. Base");
+                                System.out.println(" 2. Escolta");
+                                System.out.println(" 3. Alero");
+                                System.out.println(" 4. Alero-Pivot");
+                                System.out.println(" 5. Centro");
+                                int posJ = leer.nextInt();
+                                
+                                switch (posJ) {
+                                    case 1:
+                                        for (Object o : jugadores) {
+                                            if (o instanceof Base){
+                                                salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                            }    
+                                        }
+                                        
+                                        System.out.println("");
+                                        
+                                        break;
+                                    case 2:
+                                        
+                                        break;
+                                    case 3:
+                                        
+                                        break;
+                                    case 4:
+                                        
+                                        break;
+                                    case 5:
+                                        
+                                        break;
+                                    default:
+                                        System.out.println("Opcion Incrrecta!!");;
+                                }
+                                
+                            } else {
+                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                System.out.println();
+
+                            }
+
+                            break;
+                        case 2: //Medico
+
+                            break;
+                        case 3: //Dueño del equipo
+
+                            break;
+                        case 4: //Entrenador
+
+                            break;
+                        default:
+                            System.out.println("Opcion Incorrecta!!");
+                    }
 
                     break;
 
