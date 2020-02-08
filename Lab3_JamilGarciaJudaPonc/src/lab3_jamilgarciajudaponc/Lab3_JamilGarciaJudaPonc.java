@@ -8,6 +8,7 @@ public class Lab3_JamilGarciaJudaPonc {
     static Scanner leer = new Scanner(System.in);
 
     static ArrayList<Persona> jugadores = new ArrayList();
+    static ArrayList agenteLibre = new ArrayList();
 
     static ArrayList<Medico> medicos = new ArrayList();
     static ArrayList<Entrenador> entrenadores = new ArrayList();
@@ -30,7 +31,7 @@ public class Lab3_JamilGarciaJudaPonc {
                 case 1:// persona
                     System.out.println(" 1. Crear Persona");
                     System.out.println(" 2. Modificar Atributos de persona");
-                    System.out.println(" 3. Eliminar persona");
+                    System.out.println(" 3. Despedir persona");
                     int player = leer.nextInt();
                     switch (player) {
                         case 1:// crear persona
@@ -800,6 +801,219 @@ public class Lab3_JamilGarciaJudaPonc {
                                     break;
 
                                 case 2://Modificar atributos de medicos
+                                    System.out.println(" Seleccione que desea modificar de medico");
+                                    System.out.println(" 1. Nombre");
+                                    System.out.println(" 2. Apellido");
+                                    System.out.println(" 3. Años");
+                                    System.out.println(" 4. Salario");
+                                    System.out.println(" 5. colegio");
+                                    int opci = leer.nextInt();
+                                    switch (opci) {
+                                        case 1:
+                                            System.out.println("    Listado de Jugadores");
+                                            salidass = "";
+                                            for (Object o : jugadores) {
+                                                if (o instanceof Medico) {
+                                                    salidass += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            boolean name = false;
+
+                                            System.out.println();
+                                            System.out.print(" Ingrese numero de lista del medico: ");
+                                            int numLista = leer.nextInt();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (numLista == i) {
+                                                    name = false;
+                                                    break;
+                                                } else {
+                                                    name = true;
+                                                }
+
+                                            }
+                                            if (name == false) {
+                                                System.out.print(" Ingrese un nuevo nombre: ");
+                                                String newNombre = leer.next();
+                                                ((Medico) jugadores.get(numLista)).setNombre(newNombre);
+                                                System.out.println(" Nombre del medico modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+                                            break;
+
+                                        case 2:
+
+                                            System.out.println("    Listado de Medicos");
+                                            salidass = "";
+                                            for (Object o : jugadores) {
+                                                if (o instanceof Medico) {
+                                                    salidass += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            boolean namee = false;
+
+                                            System.out.println();
+                                            System.out.print(" Ingrese numero de lista del medi o: ");
+                                            numLista = leer.nextInt();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (numLista == i) {
+                                                    namee = false;
+                                                    break;
+                                                } else {
+                                                    namee = true;
+                                                }
+
+                                            }
+                                            if (namee == false) {
+                                                System.out.print(" Ingrese un nuevo apellido: ");
+                                                String newApellido = leer.next();
+                                                ((Medico) jugadores.get(numLista)).setNombre(newApellido);
+                                                System.out.println(" Apellido del medico modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+                                            break;
+
+                                        case 3:
+                                            System.out.println(" Opcion modificar: años del medico");
+                                            System.out.println("    Listado de Medicos");
+                                            salidass = "";
+                                            for (Object o : jugadores) {
+                                                if (o instanceof Medico) {
+                                                    salidass += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            boolean anioss = false;
+
+                                            System.out.println();
+                                            System.out.print(" Ingrese numero de lista del medico: ");
+                                            int numAnio = leer.nextInt();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (numAnio == i) {
+                                                    anioss = false;
+                                                    break;
+                                                } else {
+                                                    anioss = true;
+                                                }
+
+                                            }
+                                            if (anioss == false) {
+                                                System.out.print(" Ingrese un año: ");
+                                                int newAnio = leer.nextInt();
+                                                ((Medico) jugadores.get(numAnio)).setAnios(newAnio);
+                                                System.out.println(" años del medico modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+
+                                            break;
+
+                                        case 4:
+                                            System.out.println(" Opcion modificar: salario del medico");
+                                            System.out.println("    Listado de medicos");
+                                            salidass = "";
+                                            for (Object o : jugadores) {
+                                                if (o instanceof Medico) {
+                                                    salidass += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            boolean salarioo = false;
+
+                                            System.out.println();
+                                            System.out.print(" Ingrese numero de lista del medico: ");
+                                            int numSalario = leer.nextInt();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (numSalario == i) {
+                                                    salarioo = false;
+                                                    break;
+                                                } else {
+                                                    salarioo = true;
+                                                }
+
+                                            }
+                                            if (salarioo == false) {
+                                                System.out.print(" Ingrese un nuevo salario: ");
+                                                double newSalario = leer.nextDouble();
+                                                ((Medico) jugadores.get(numSalario)).setSalario(newSalario);
+                                                System.out.println(" Salario del medico modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+
+                                            break;
+
+                                        case 5:
+                                            System.out.println(" Opcion modificar: colegio del medico");
+                                            System.out.println("    Listado de Medicos");
+                                            salidass = "";
+                                            for (Object o : jugadores) {
+                                                if (o instanceof Jugador) {
+                                                    salidass += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                                }
+
+                                            }
+                                            System.out.println(salidass);
+
+                                            boolean cole = false;
+
+                                            System.out.println();
+                                            System.out.print(" Ingrese numero de lista del jugador: ");
+                                            int numCole = leer.nextInt();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (numCole == i) {
+                                                    cole = false;
+                                                    break;
+                                                } else {
+                                                    cole = true;
+                                                }
+
+                                            }
+                                            if (cole == false) {
+                                                System.out.print(" Ingrese un nuevo colegio: ");
+                                                String newColegio=leer.next();
+                                                ((Medico)jugadores.get(numCole)).setColegio(newColegio);
+                                                System.out.println(" Colegio del medico ha modificado con exito");
+                                                System.out.println();
+
+                                            } else {
+                                                System.out.println(" Error!!! Posicion seleccionada no existe");
+                                                System.out.println();
+
+                                            }
+
+                                            break;
+                                        default:
+                                            System.out.println(" Opcion incorrecta");
+                                            System.out.println();
+                                    }
 
                                     break;
 
@@ -817,7 +1031,199 @@ public class Lab3_JamilGarciaJudaPonc {
 
                             break;
 
-                        case 3:// Eliminar Jugador
+                        case 3:// Despedir persona
+                            System.out.println(" Seleccione que personal desea despedir");
+                            System.out.println(" 1. Jugador ");
+                            System.out.println(" 2. Medicos ");
+                            System.out.println(" 3. Dueño ");
+                            System.out.println(" 4. Entrenador ");
+                            int position = leer.nextInt();
+                            switch (position) {
+                                case 1:
+                                    String ends = "";
+
+                                    for (Object o : jugadores) {
+                                        if (o instanceof Jugador) {
+                                            ends += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                        }
+
+                                    }
+                                    System.out.println(ends);
+
+                                    boolean posteoo = false;
+
+                                    System.out.println();
+                                    System.out.print(" Ingrese numero de lista del jugador: ");
+                                    int numPosteo = leer.nextInt();
+                                    for (int i = 0; i < jugadores.size(); i++) {
+                                        if (numPosteo == i) {
+                                            posteoo = false;
+                                            break;
+                                        } else {
+                                            posteoo = true;
+                                        }
+
+                                    }
+                                    if (posteoo == false) {
+                                        agenteLibre.add(jugadores.get(numPosteo));
+                                        jugadores.remove(numPosteo);
+                                        System.out.println(" Jugador ha sido despedido");
+                                        System.out.println();
+
+                                        System.out.println(" Lista de agentes libres");
+                                        for (int i = 0; i < agenteLibre.size(); i++) {
+                                            System.out.println(agenteLibre.get(i));
+
+                                        }
+
+                                    } else {
+                                        System.out.println(" Error!!! Posicion seleccionada no existe");
+                                        System.out.println();
+
+                                    }
+
+                                    break;
+
+                                case 2:
+                                    String endi = "";
+                                    for (Object o : jugadores) {
+                                        if (o instanceof Medico) {
+                                            endi += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                        }
+
+                                    }
+                                    System.out.println(endi);
+
+                                    boolean pasti = false;
+
+                                    System.out.println();
+                                    System.out.print(" Ingrese numero de lista del jugador: ");
+                                    numPosteo = leer.nextInt();
+                                    for (int i = 0; i < jugadores.size(); i++) {
+                                        if (jugadores.get(i) instanceof Medico) {
+                                            if (numPosteo == i) {
+                                                pasti = false;
+                                                break;
+                                            } else {
+                                                pasti = true;
+                                            }
+                                        }
+
+                                    }
+                                    if (pasti == false) {
+                                        agenteLibre.add(jugadores.get(numPosteo));
+                                        jugadores.remove(numPosteo);
+                                        System.out.println(" Jugador ha sido despedido");
+                                        System.out.println();
+
+                                        System.out.println(" Lista de agentes libres");
+                                        for (int i = 0; i < agenteLibre.size(); i++) {
+                                            System.out.println(agenteLibre.get(i));
+
+                                        }
+
+                                    } else {
+                                        System.out.println(" Error!!! Posicion seleccionada no existe");
+                                        System.out.println();
+
+                                    }
+
+                                    break;
+
+                                case 3:
+                                    endi = "";
+                                    for (Object o : jugadores) {
+                                        if (o instanceof DuenioDeEquipo) {
+                                            endi += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                        }
+
+                                    }
+                                    System.out.println(endi);
+
+                                    boolean pastii = false;
+
+                                    System.out.println();
+                                    System.out.print(" Ingrese numero de lista del jugador: ");
+                                    numPosteo = leer.nextInt();
+                                    for (int i = 0; i < jugadores.size(); i++) {
+                                        if (jugadores.get(i) instanceof DuenioDeEquipo) {
+                                            if (numPosteo == i) {
+                                                pastii = false;
+                                                break;
+                                            } else {
+                                                pastii = true;
+                                            }
+                                        }
+
+                                    }
+                                    if (pastii == false) {
+                                        agenteLibre.add(jugadores.get(numPosteo));
+                                        jugadores.remove(numPosteo);
+                                        System.out.println(" Jugador ha sido despedido");
+                                        System.out.println();
+
+                                        System.out.println(" Lista de agentes libres");
+                                        for (int i = 0; i < agenteLibre.size(); i++) {
+                                            System.out.println(agenteLibre.get(i));
+
+                                        }
+
+                                    } else {
+                                        System.out.println(" Error!!! Posicion seleccionada no existe");
+                                        System.out.println();
+
+                                    }
+
+                                    break;
+
+                                case 4:
+                                    endi = "";
+                                    for (Object o : jugadores) {
+                                        if (o instanceof Entrenador) {
+                                            endi += " [" + jugadores.indexOf(o) + "] " + o + "\n";
+                                        }
+
+                                    }
+                                    System.out.println(endi);
+
+                                    boolean enti = false;
+
+                                    System.out.println();
+                                    System.out.print(" Ingrese numero de lista del jugador: ");
+                                    numPosteo = leer.nextInt();
+                                    for (int i = 0; i < jugadores.size(); i++) {
+                                        if (jugadores.get(i) instanceof Entrenador) {
+                                            if (numPosteo == i) {
+                                                enti = false;
+                                                break;
+                                            } else {
+                                                enti = true;
+                                            }
+                                        }
+
+                                    }
+                                    if (enti == false) {
+                                        agenteLibre.add(jugadores.get(numPosteo));
+                                        jugadores.remove(numPosteo);
+                                        System.out.println(" Jugador ha sido despedido");
+                                        System.out.println();
+
+                                        System.out.println(" Lista de agentes libres");
+                                        for (int i = 0; i < agenteLibre.size(); i++) {
+                                            System.out.println(agenteLibre.get(i));
+
+                                        }
+
+                                    } else {
+                                        System.out.println(" Error!!! Posicion seleccionada no existe");
+                                        System.out.println();
+
+                                    }
+
+                                    break;
+                                default:
+                                    throw new AssertionError();
+                            }
 
                             break;
                         default:
