@@ -11,6 +11,7 @@ public class EntrenadorPrin extends Entrenador{
         this.salario = salario;
     }
 
+
   
 
     public void setSalario(int salario) {
@@ -21,6 +22,7 @@ public class EntrenadorPrin extends Entrenador{
     public String toString() {
         return super.toString() + "EntrenadorPrin{" + "salario=" + salario + '}';
     }
+
     
     
     
