@@ -2,7 +2,7 @@ package lab3_jamilgarciajudaponc;
 
 public class MedTera extends Medico {
     
-    private int NTerapias;
+    private int NTerapias = 0;
 
     public MedTera() {
     }

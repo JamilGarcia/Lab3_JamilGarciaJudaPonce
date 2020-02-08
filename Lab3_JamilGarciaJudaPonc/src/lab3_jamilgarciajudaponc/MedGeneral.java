@@ -4,6 +4,7 @@ public class MedGeneral extends Medico {
 
     private int NEnfreme;
 
+
     public MedGeneral() {
 
     }

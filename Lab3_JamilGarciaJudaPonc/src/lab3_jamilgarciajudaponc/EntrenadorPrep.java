@@ -7,7 +7,7 @@ public class EntrenadorPrep extends Entrenador {
     public EntrenadorPrep() {
     }
 
-    public EntrenadorPrep(double salario, String Jugo, String jugadaFav, String nombre, String apellido, int anios) {
+    public EntrenadorPrep(int salario, String Jugo, String jugadaFav, String nombre, String apellido, int anios) {
         super(Jugo, jugadaFav, nombre, apellido, anios, salario);
 
     }

@@ -2,7 +2,7 @@ package lab3_jamilgarciajudaponc;
 
 public class MedCirujano extends Medico{
     
-    private int NCirujias;
+    private int NCirujias = 0;
 
     public MedCirujano() {
     }
