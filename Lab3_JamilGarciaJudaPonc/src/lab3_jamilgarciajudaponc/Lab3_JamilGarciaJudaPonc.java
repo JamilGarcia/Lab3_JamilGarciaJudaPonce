@@ -10,6 +10,10 @@ public class Lab3_JamilGarciaJudaPonc {
     static ArrayList<Medico> medicos = new ArrayList();
     static ArrayList<Entrenador> entrenadores = new ArrayList();
     static ArrayList<DuenioDeEquipo> duenio = new ArrayList();
+    static ArrayList lisjug = new ArrayList();
+    static ArrayList lismed = new ArrayList();
+    static ArrayList lisDue = new ArrayList();
+    static ArrayList lisent = new ArrayList();
 
     public static void main(String[] args) {
 
@@ -113,7 +117,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                     break;
 
                                 case 2:// crear medico
-                                     System.out.print(" Ingrese nombre del medico: ");
+                                    System.out.print(" Ingrese nombre del medico: ");
                                     String nombree = leer.next();
                                     System.out.print(" Ingrese apellido del medico: ");
                                     String apellidoo = leer.next();
@@ -125,30 +129,25 @@ public class Lab3_JamilGarciaJudaPonc {
                                     System.out.println(" 1. Medico general");
                                     System.out.println(" 2. Medico Cirujano");
                                     System.out.println(" 3. Medico teraputa");
-                                    int medicos=leer.nextInt();
+                                    int medicos = leer.nextInt();
                                     switch (medicos) {
                                         case 1:// medico general
                                             System.out.print(" Ingrese colegio: ");
-                                            String colegio=leer.next();
+                                            String colegio = leer.next();
                                             System.out.println("");
-                                            
-                                            
+
                                             break;
-                                            
+
                                         case 2:
-                                            
-                                            
+
                                             break;
-                                            
-                                            
+
                                         case 3:
-                                            
-                                            
+
                                             break;
                                         default:
                                             throw new AssertionError();
                                     }
-                                    
 
                                     break;
 
@@ -725,537 +724,6 @@ public class Lab3_JamilGarciaJudaPonc {
                     break;
 
                 case 2:// Equipo
-
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                   
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
                     System.out.println();
                     System.out.println("Creacion Del Equipo: ");
                     System.out.println();
@@ -1298,7 +766,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                 }
 
                             }
-                            
+
                             if (jugador == false) {
                                 System.out.println("Seleccione posicion de jugador a fichar: ");
                                 System.out.println(" 1. Base");
@@ -1307,34 +775,68 @@ public class Lab3_JamilGarciaJudaPonc {
                                 System.out.println(" 4. Alero-Pivot");
                                 System.out.println(" 5. Centro");
                                 int posJ = leer.nextInt();
-                                
+
                                 switch (posJ) {
                                     case 1:
                                         for (Object o : jugadores) {
-                                            if (o instanceof Base){
+                                            if (o instanceof Base) {
                                                 salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
-                                            }    
+                                            }
                                         }
-                                        
-                                        System.out.println("");
-                                        
+
+                                        System.out.println("Seleccione un jugador para fichar: ");
+                                        int posJug = leer.nextInt();
+                                        lisjug.add(jugadores.get(posJug));
                                         break;
                                     case 2:
-                                        
+                                        for (Object o : jugadores) {
+                                            if (o instanceof Escolta) {
+                                                salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+
+                                        System.out.println("Seleccione un jugador para fichar: ");
+                                        posJug = leer.nextInt();
+                                        lisjug.add(jugadores.get(posJug));
                                         break;
                                     case 3:
-                                        
+                                        for (Object o : jugadores) {
+                                            if (o instanceof Alero) {
+                                                salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+
+                                        System.out.println("Seleccione un jugador para fichar: ");
+                                        posJug = leer.nextInt();
+                                        lisjug.add(jugadores.get(posJug));
                                         break;
                                     case 4:
-                                        
+                                        for (Object o : jugadores) {
+                                            if (o instanceof AleroPivot) {
+                                                salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+
+                                        System.out.println("Seleccione un jugador para fichar: ");
+                                        posJug = leer.nextInt();
+                                        lisjug.add(jugadores.get(posJug));
                                         break;
                                     case 5:
-                                        
+                                        for (Object o : jugadores) {
+                                            if (o instanceof Centro) {
+                                                salida += "[" + jugadores.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+
+                                        System.out.println("Seleccione un jugador para fichar: ");
+                                        posJug = leer.nextInt();
+                                        lisjug.add(jugadores.get(posJug));
                                         break;
                                     default:
-                                        System.out.println("Opcion Incrrecta!!");;
+                                        System.out.println("Opcion Incrrecta!!");
+                                        ;
                                 }
-                                
+
                             } else {
                                 System.out.println(" Error!!! Posicion seleccionada no existe");
                                 System.out.println();
@@ -1343,13 +845,97 @@ public class Lab3_JamilGarciaJudaPonc {
 
                             break;
                         case 2: //Medico
+                            salida = "";
+                            for (Object o : medicos) {
+                                if (o instanceof Medico) {
+                                    salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
+                                }
+                            }
+                            System.out.println(salida);
 
-                            break;
-                        case 3: //Dueño del equipo
+                            boolean medico = false;
 
+                            System.out.println();
+                            System.out.print(" Ingrese posicion para fichar jugador: ");
+                            int medicoAg = leer.nextInt();
+
+                            for (int i = 0; i < jugadores.size(); i++) {
+                                if (medicoAg == i) {
+                                    medico = false;
+                                } else {
+                                    medico = true;
+                                }
+
+                            }
+
+                            if (medico == false) {
+                                System.out.println("Seleccione posicion de medico a fichar: ");
+                                System.out.println(" 1. General");
+                                System.out.println(" 2. Cirujia");
+                                System.out.println(" 3. Terapueto");
+                                int posM = leer.nextInt();
+
+                                switch (posM) {
+                                    case 1:
+                                        for (Object o : medicos) {
+                                            if (o instanceof MedGeneral) {
+                                                salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+                                        System.out.println("Seleccione un medico para fichar: ");
+                                        int posMed = leer.nextInt();
+                                        lismed.add(jugadores.get(posMed));
+                                        break;
+                                    case 2:
+                                        for (Object o : medicos) {
+                                            if (o instanceof MedCirujano) {
+                                                salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+                                        System.out.println("Seleccione un medico para fichar: ");
+                                        posMed = leer.nextInt();
+                                        lismed.add(jugadores.get(posMed));
+                                        break;
+
+                                    case 3:
+                                        for (Object o : medicos) {
+                                            if (o instanceof MedTera) {
+                                                salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
+                                            }
+                                        }
+                                        System.out.println("Seleccione un medico para fichar: ");
+                                        posMed = leer.nextInt();
+                                        lismed.add(medicos.get(posMed));
+                                        break;
+                                    default:
+                                        System.out.println("Opcion Incorrecta");
+                                        ;
+
+                                        break;
+                                }
+                            }
+
+                        case 3:
+                            salida = "";
+                            for (Object o : duenio) {
+                                if (o instanceof DuenioDeEquipo) {
+                                    salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
+                                }
+                            }
+                            System.out.println("Seleccione un medico para fichar: ");
+                            int posDue = leer.nextInt();
+                            lisDue.add(duenio.get(posDue));
                             break;
                         case 4: //Entrenador
-
+                            salida = "";
+                            for (Object o : entrenadores){
+                                if (o instanceof Entrenador) {
+                                    salida += "[" + entrenadores.indexOf(o) + "] " + o + "\n";
+                                }
+                            }
+                            System.out.println("Seleccione un medico para fichar: ");
+                            int posEnt = leer.nextInt();
+                            lisDue.add(entrenadores.get(posEnt));
                             break;
                         default:
                             System.out.println("Opcion Incorrecta!!");
@@ -1358,7 +944,7 @@ public class Lab3_JamilGarciaJudaPonc {
                     break;
 
                 case 3:// Jugadas
-
+                    
                     break;
 
                 case 4:// Salir
@@ -1372,14 +958,6 @@ public class Lab3_JamilGarciaJudaPonc {
         }
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-   
 
 }
+

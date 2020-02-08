@@ -2,7 +2,7 @@
 package lab3_jamilgarciajudaponc;
 
 
-public class Entrenador {
+public class Entrenador extends Persona{
     
     private String Jugo; //Si fue jugador?
     private Jugadas jugadaFav; // Jugada FAv

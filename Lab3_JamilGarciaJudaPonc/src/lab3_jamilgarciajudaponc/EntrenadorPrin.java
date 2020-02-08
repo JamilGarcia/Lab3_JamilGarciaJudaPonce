@@ -9,19 +9,6 @@ public class EntrenadorPrin extends Entrenador{
     public EntrenadorPrin(String Jugo, Jugadas jugada) {
         super(Jugo, jugada);
     }
-
-    public int getSalario() {
-        return salario;
-    }
-
-    public void setSalario(int salario) {
-        this.salario = salario;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + "EntrenadorPrin{" + "salario=" + salario + '}';
-    }
     
     
     
