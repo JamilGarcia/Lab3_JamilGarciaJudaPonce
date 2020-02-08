@@ -863,7 +863,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             boolean namee = false;
 
                                             System.out.println();
-                                            System.out.print(" Ingrese numero de lista del medi o: ");
+                                            System.out.print(" Ingrese numero de lista del medico: ");
                                             numLista = leer.nextInt();
                                             for (int i = 0; i < jugadores.size(); i++) {
                                                 if (numLista == i) {
