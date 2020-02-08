@@ -1,14 +1,17 @@
 package lab3_jamilgarciajudaponc;
 
-public class DuenioDeEquipo {
+public class DuenioDeEquipo extends Persona{
     
     private int NetWorth;
     private String nacio;
 
-    public DuenioDeEquipo(int NetWorth, String nacio) {
+    public DuenioDeEquipo(int NetWorth, String nacio, String nombre, String apellido, int anios, double salario) {
+        super(nombre, apellido, anios, salario);
         this.NetWorth = NetWorth;
         this.nacio = nacio;
     }
+
+    
 
     public int getNetWorth() {
         return NetWorth;
@@ -28,7 +31,9 @@ public class DuenioDeEquipo {
 
     @Override
     public String toString() {
-        return "DuenioDeEquipo{" + "nacio=" + nacio + '}';
+        return super.toString() +  "DuenioDeEquipo{" + "NetWorth=" + NetWorth + ", nacio=" + nacio + '}';
     }
+
+   
     
 }

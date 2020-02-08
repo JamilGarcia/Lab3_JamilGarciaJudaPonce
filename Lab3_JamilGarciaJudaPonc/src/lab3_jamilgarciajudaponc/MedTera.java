@@ -7,9 +7,12 @@ public class MedTera extends Medico {
     public MedTera() {
     }
 
-    public MedTera(String colegio) {
-        super(colegio);
+    public MedTera(int NTerapias, String colegio, String nombre, String apellido, int anios, double salario) {
+        super(colegio, nombre, apellido, anios, salario);
+        this.NTerapias = NTerapias;
     }
+
+    
 
     public int getNTerapias() {
         return NTerapias;

@@ -6,18 +6,7 @@ import java.util.Scanner;
 public class Lab3_JamilGarciaJudaPonc {
 
     static Scanner leer = new Scanner(System.in);
-    static ArrayList<Jugador> jugadores = new ArrayList();
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    static ArrayList<Persona> jugadores = new ArrayList();
 
     public static void main(String[] args) {
 
@@ -122,7 +111,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                     break;
 
                                 case 2:// crear medico
-                                     System.out.print(" Ingrese nombre del medico: ");
+                                    System.out.print(" Ingrese nombre del medico: ");
                                     String nombree = leer.next();
                                     System.out.print(" Ingrese apellido del medico: ");
                                     String apellidoo = leer.next();
@@ -130,42 +119,139 @@ public class Lab3_JamilGarciaJudaPonc {
                                     int anioss = leer.nextInt();
                                     System.out.print(" Ingrese salario: ");
                                     double salarioo = leer.nextDouble();
+                                    System.out.print(" Ingrese colegio: ");
+                                    String colegio = leer.next();
                                     System.out.println(" Seleccione que tipo de medico: ");
                                     System.out.println(" 1. Medico general");
                                     System.out.println(" 2. Medico Cirujano");
                                     System.out.println(" 3. Medico teraputa");
-                                    int medicos=leer.nextInt();
+                                    int medicos = leer.nextInt();
                                     switch (medicos) {
                                         case 1:// medico general
-                                            System.out.print(" Ingrese colegio: ");
-                                            String colegio=leer.next();
+
                                             System.out.println("");
-                                            
-                                            
+                                            int nEnfermedades = 0;
+                                            jugadores.add(new MedGeneral(nEnfermedades, colegio, nombree, apellidoo, anioss, salarioo));
+
+                                            System.out.println(" Medico general agregado con exito");
+                                            System.out.println();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (jugadores.get(i) instanceof Medico) {
+                                                    System.out.println(jugadores.get(i));
+
+                                                }
+                                            }
                                             break;
-                                            
-                                        case 2:
-                                            
-                                            
+
+                                        case 2:// medico cirujano
+                                            int nCirujias = 0;
+                                            jugadores.add(new MedCirujano(nCirujias, colegio, nombree, apellidoo, anioss, salarioo));
+                                            System.out.println(" Medico cirujano agregado con exito");
+                                            System.out.println();
+
                                             break;
-                                            
-                                            
-                                        case 3:
-                                            
-                                            
+
+                                        case 3://medico terapeuta
+                                            int terapias = 0;
+                                            jugadores.add(new MedTera(terapias, colegio, nombree, apellidoo, anioss, salarioo));
+                                            System.out.println(" Medico terapeuta agregado con exito");
+                                            System.out.println();
+                                            for (int i = 0; i < jugadores.size(); i++) {
+                                                if (jugadores.get(i) instanceof Medico) {
+                                                    System.out.println(jugadores.get(i));
+
+                                                }
+
+                                            }
+
                                             break;
                                         default:
                                             throw new AssertionError();
                                     }
-                                    
 
                                     break;
 
                                 case 3:// crear dueño de equipo
+                                    System.out.print(" Ingrese nombre del dueño: ");
+                                    String nombreee = leer.next();
+                                    System.out.print(" Ingrese apellido del dueño: ");
+                                    String apellidooo = leer.next();
+                                    System.out.print(" Ingrese años: ");
+                                    int aniosss = leer.nextInt();
+                                    System.out.print(" Ingrese salario: ");
+                                    double salariooo = leer.nextDouble();
+                                    System.out.print(" Ingrese net Worth");
+                                    int net = leer.nextInt();
+                                    System.out.println(" Ingrese ciudad: ");
+                                    String ciudad = leer.next();
+                                    jugadores.add(new DuenioDeEquipo(net, ciudad, nombreee, apellidooo, aniosss, salariooo));
+                                    for (int i = 0; i < jugadores.size(); i++) {
+                                        if (jugadores.get(i) instanceof DuenioDeEquipo) {
+                                            System.out.println(jugadores.get(i));
+
+                                        }
+
+                                    }
 
                                     break;
 
                                 case 4:// crear entrenador
+                                    String desicion = "";
+                                    System.out.print(" Ingrese nombre del entrenador: ");
+                                    String name = leer.next();
+                                    System.out.print(" Ingrese apellido del dueño: ");
+                                    String apell = leer.next();
+                                    System.out.print(" Ingrese años: ");
+                                    int year = leer.nextInt();
+                                    System.out.println(" Fue jugador [si/no]: ");
+                                    System.out.println(" 1. Si");
+                                    System.out.println(" 2. No");
+                                    int desiciones = leer.nextInt();
+                                    switch (desiciones) {
+                                        case 1:
+                                            desicion = "si";
+                                            break;
+
+                                        case 2:
+                                            desicion = "no";
+
+                                            break;
+                                        default:
+                                            throw new AssertionError();
+                                    }
+                                    int salary = 0;
+                                    System.out.println(" Ingrese jugada favorita");
+                                    String favorita = leer.next();
+                                    System.out.println(" Que tipo de entrendor es: ");
+                                    System.out.println(" 1. Entrenador principal");
+                                    System.out.println(" 2. Asistente de entrenador");
+                                    System.out.println(" 3. Preparador fisico");
+                                    int entrenar = leer.nextInt();
+                                    switch (entrenar) {
+                                        case 1:
+                                            salary = 2000000000;
+                                            jugadores.add(new Entrenador(desicion, favorita, name, apell, year, salary));
+                                            break;
+                                            
+                                             case 2:
+                                            salary = 1000000000;
+                                            jugadores.add(new Entrenador(desicion, favorita, name, apell, year, salary));
+                                            break;
+                                            
+                                            
+                                             case 3:
+                                            salary = 800000000;
+                                            jugadores.add(new Entrenador(desicion, favorita, name, apell, year, salary));
+                                                 for (int i = 0; i < jugadores.size(); i++) {
+                                                     if (jugadores.get(i) instanceof Entrenador) {
+                                                         System.out.println(jugadores.get(i));
+                                                     }
+                                                     
+                                                 }
+                                            break;
+                                        default:
+                                            throw new AssertionError();
+                                    }
 
                                     break;
                                 default:
@@ -234,7 +320,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (name == false) {
                                                 System.out.print(" Ingrese un nuevo nombre: ");
                                                 String newNombre = leer.next();
-                                                jugadores.get(numLista).setNombre(newNombre);
+                                                ((Jugador) jugadores.get(numLista)).setNombre(newNombre);
                                                 System.out.println(" Nombre del jugador modificado con exito");
                                                 System.out.println();
 
@@ -399,7 +485,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (shirt == false) {
                                                 System.out.print(" Ingrese un nuevo numero de camisa: ");
                                                 int newCamisa = leer.nextInt();
-                                                jugadores.get(numCamisaa).setCamisaNum(newCamisa);
+                                                ((Jugador) jugadores.get(numCamisaa)).setCamisaNum(newCamisa);
                                                 System.out.println(" numero de camisa del jugador modificado con exito");
                                                 System.out.println();
 
@@ -440,7 +526,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (tiros3 == false) {
                                                 System.out.print(" Ingrese tiros de 3: ");
                                                 int newTiros3 = leer.nextInt();
-                                                jugadores.get(numTiros3).setTirosDe3(newTiros3);
+                                                ((Jugador) jugadores.get(numTiros3)).setTirosDe3(newTiros3);
                                                 System.out.println(" Tiros de 3 del jugador modificado con exito");
                                                 System.out.println();
 
@@ -481,7 +567,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (defense == false) {
                                                 System.out.print(" Ingrese defensa: ");
                                                 int newDefensa = leer.nextInt();
-                                                jugadores.get(numDefense).setDefensa(newDefensa);
+                                                ((Jugador) jugadores.get(numDefense)).setDefensa(newDefensa);
                                                 System.out.println(" Defensa del jugador modificado con exito");
                                                 System.out.println();
 
@@ -522,7 +608,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (media == false) {
                                                 System.out.print(" Ingrese tiros de media: ");
                                                 int newMedia = leer.nextInt();
-                                                jugadores.get(numMedia).setTiroMedia(newMedia);
+                                                ((Jugador) jugadores.get(numMedia)).setTiroMedia(newMedia);
                                                 System.out.println(" Tiros de media del jugador modificado con exito");
                                                 System.out.println();
 
@@ -563,7 +649,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (reboot == false) {
                                                 System.out.print(" Ingrese rebotes: ");
                                                 int newRebote = leer.nextInt();
-                                                jugadores.get(numRebote).setRebote(newRebote);
+                                                ((Jugador) jugadores.get(numRebote)).setRebote(newRebote);
                                                 System.out.println(" Rebotes del jugador modificado con exito");
                                                 System.out.println();
 
@@ -604,7 +690,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (bandej == false) {
                                                 System.out.print(" Ingrese bandeja: ");
                                                 int newBandeja = leer.nextInt();
-                                                jugadores.get(numBan).setBandeja(newBandeja);
+                                                ((Jugador) jugadores.get(numBan)).setBandeja(newBandeja);
                                                 System.out.println(" Bandeja del jugador modificado con exito");
                                                 System.out.println();
 
@@ -645,7 +731,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (pass == false) {
                                                 System.out.print(" Ingrese pases: ");
                                                 int newPases = leer.nextInt();
-                                                jugadores.get(numPass).setPases(newPases);
+                                                ((Jugador) jugadores.get(numPass)).setPases(newPases);
                                                 System.out.println(" Pases del jugador modificado con exito");
                                                 System.out.println();
 
@@ -685,7 +771,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                             if (posteoo == false) {
                                                 System.out.print(" Ingrese posteo: ");
                                                 int newPosteo = leer.nextInt();
-                                                jugadores.get(numPosteo).setPosteo(newPosteo);
+                                                ((Jugador) jugadores.get(numPosteo)).setPosteo(newPosteo);
                                                 System.out.println(" Posteo del jugador modificado con exito");
                                                 System.out.println();
 
@@ -752,14 +838,5 @@ public class Lab3_JamilGarciaJudaPonc {
         }
 
     }
-    
-    
-    
-    
-    
-    
-    
-    
-   
 
 }

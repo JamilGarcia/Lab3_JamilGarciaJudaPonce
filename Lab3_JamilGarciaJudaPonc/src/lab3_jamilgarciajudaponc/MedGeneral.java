@@ -1,16 +1,20 @@
 package lab3_jamilgarciajudaponc;
 
-public class MedGeneral extends Medico{
-    
+public class MedGeneral extends Medico {
+
     private int NEnfreme;
 
     public MedGeneral() {
+
     }
 
-    public MedGeneral(String colegio) {
-        super(colegio);
+    public MedGeneral(int NEnfreme, String colegio, String nombre, String apellido, int anios, double salario) {
+        super(colegio, nombre, apellido, anios, salario);
+        this.NEnfreme = NEnfreme;
     }
 
+    
+    
     public int getNEnfreme() {
         return NEnfreme;
     }
@@ -23,7 +27,5 @@ public class MedGeneral extends Medico{
     public String toString() {
         return super.toString() + "MedGeneral{" + "NEnfreme=" + NEnfreme + '}';
     }
-     
-    
-    
+
 }

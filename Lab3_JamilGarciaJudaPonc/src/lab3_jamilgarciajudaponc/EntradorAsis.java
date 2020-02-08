@@ -8,15 +8,8 @@ public class EntradorAsis extends Entrenador{
     public EntradorAsis() {
     }
 
-    public EntradorAsis(String Jugo, Jugadas jugada) {
-        super(Jugo, jugada);
-    }
-
-    public int getSalario() {
-        return salario;
-    }
-
-    public void setSalario(int salario) {
+    public EntradorAsis(int salario, String Jugo, String jugadaFav, String nombre, String apellido, int anios) {
+        super(Jugo, jugadaFav, nombre, apellido, anios, salario);
         this.salario = salario;
     }
 

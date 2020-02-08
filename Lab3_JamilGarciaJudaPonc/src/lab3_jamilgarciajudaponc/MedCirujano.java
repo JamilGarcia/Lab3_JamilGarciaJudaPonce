@@ -7,9 +7,12 @@ public class MedCirujano extends Medico{
     public MedCirujano() {
     }
 
-    public MedCirujano(String colegio) {
-        super(colegio);
+    public MedCirujano(int NCirujias, String colegio, String nombre, String apellido, int anios, double salario) {
+        super(colegio, nombre, apellido, anios, salario);
+        this.NCirujias = NCirujias;
     }
+
+ 
 
     public int getNCirujias() {
         return NCirujias;

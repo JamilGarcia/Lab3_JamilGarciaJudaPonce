@@ -1,17 +1,18 @@
 package lab3_jamilgarciajudaponc;
 
-public class Medico {
+public class Medico extends Persona{
     
     private String colegio;
 
     public Medico() {
         super();
     }
-    
 
-    public Medico(String colegio) {
+    public Medico(String colegio, String nombre, String apellido, int anios, double salario) {
+        super(nombre, apellido, anios, salario);
         this.colegio = colegio;
     }
+    
 
     public String getColegio() {
         return colegio;
@@ -23,7 +24,7 @@ public class Medico {
 
     @Override
     public String toString() {
-        return "Medico{" + "colegio=" + colegio + '}';
+        return super.toString() + "Medico{" + "colegio=" + colegio + '}';
     }
     
     

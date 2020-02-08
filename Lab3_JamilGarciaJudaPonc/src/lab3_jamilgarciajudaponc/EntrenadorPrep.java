@@ -1,29 +1,22 @@
 package lab3_jamilgarciajudaponc;
 
+public class EntrenadorPrep extends Entrenador {
 
-public class EntrenadorPrep {
-    
     private int salario;
 
     public EntrenadorPrep() {
     }
 
-    public EntrenadorPrep(int salario) {
-        this.salario = salario;
-    }
+    public EntrenadorPrep(double salario, String Jugo, String jugadaFav, String nombre, String apellido, int anios) {
+        super(Jugo, jugadaFav, nombre, apellido, anios, salario);
 
-    public int getSalario() {
-        return salario;
-    }
-
-    public void setSalario(int salario) {
-        this.salario = salario;
     }
 
     @Override
     public String toString() {
-        return super.toString()+ "EntrenadorPrep{" + "salario=" + salario + '}';
+        return super.toString() + "EntrenadorPrep{" + "salario=" + salario + '}';
     }
-    
-    
+
+ 
+
 }
