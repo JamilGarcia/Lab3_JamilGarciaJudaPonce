@@ -1,11 +1,13 @@
 package lab3_jamilgarciajudaponc;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Lab3_JamilGarciaJudaPonc {
 
     static Scanner leer = new Scanner(System.in);
+    static Random ran = new Random();
 
     static ArrayList<Persona> jugadores = new ArrayList();
 
@@ -24,7 +26,8 @@ public class Lab3_JamilGarciaJudaPonc {
             System.out.println(" 1. Persona");
             System.out.println(" 2. Equipo ");
             System.out.println(" 3. Jugadas");
-            System.out.println(" 4. Salir");
+            System.out.println(" 4. Simulacion");
+            System.out.println(" 5. Salir");
             int opcion = leer.nextInt();
             switch (opcion) {
                 case 1:// persona
@@ -960,7 +963,7 @@ public class Lab3_JamilGarciaJudaPonc {
                             boolean medico = false;
 
                             System.out.println();
-                            System.out.print(" Ingrese posicion para fichar jugador: ");
+                            System.out.print(" Ingrese posicion para fichar medico: ");
                             int medicoAg = leer.nextInt();
 
                             for (int i = 0; i < jugadores.size(); i++) {
@@ -1026,7 +1029,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                     salida += "[" + medicos.indexOf(o) + "] " + o + "\n";
                                 }
                             }
-                            System.out.println("Seleccione un medico para fichar: ");
+                            System.out.println("Seleccione un Dueño para fichar: ");
                             int posDue = leer.nextInt();
                             lisDue.add(duenio.get(posDue));
                             break;
@@ -1037,7 +1040,7 @@ public class Lab3_JamilGarciaJudaPonc {
                                     salida += "[" + entrenadores.indexOf(o) + "] " + o + "\n";
                                 }
                             }
-                            System.out.println("Seleccione un medico para fichar: ");
+                            System.out.println("Seleccione un entrenador para fichar: ");
                             int posEnt = leer.nextInt();
                             lisDue.add(entrenadores.get(posEnt));
                             break;
@@ -1048,10 +1051,33 @@ public class Lab3_JamilGarciaJudaPonc {
                     break;
 
                 case 3:// Jugadas
-
+                    System.out.println("Ingrese el nombre de la jugada a crear");
+                    String nomjugada = leer.next();
+                    System.out.println("Ingrese la probabilidad de exito");
+                    int probab = leer.nextInt();
+                    Jugadas Jugada = new Jugadas();
+                    Jugada.setJugar(nomjugada);
+                    Jugada.setProb(probab);
+                    
                     break;
-
-                case 4:// Salir
+                    
+                case 4: //Simulacion
+                    int lesion = ran.nextInt(100);
+                    if (lesion < 40){
+                        System.out.println("Jugador lesionado");
+                        MedCirujano mc = new MedCirujano();
+                        MedTera mt = new MedTera();
+                        mc.setNCirujias(mc.getNCirujias() + 1);
+                        mt.setNTerapias(mt.getNTerapias()+ 1);
+                    }
+                    int enfermo = ran.nextInt(100);
+                    if (enfermo < 30){
+                        System.out.println("jugador enfermo");
+                        MedGeneral mg = new MedGeneral();
+                        mg.setNEnfreme(mg.getNEnfreme()+1);
+                    }
+                    break;
+                case 5:// Salir
 
                     System.exit(4);
                     break;
